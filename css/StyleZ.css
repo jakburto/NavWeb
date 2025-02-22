@@ -1,2 +1,60 @@
 ﻿body {
+    background-color: wheat;
+    * {
+          box-sizing:border-box
+      }
+
+.whole-enchalada {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    align-content:stretch;
+}
+    .whole-enchalada > div {
+        text-align:center;
+        align-content: center;
+        margin:5px;
+    }
+    .sidebar {
+        display:flex;
+        flex-direction:column;
+        
+        
+        margin:auto;
+        max-width:800px;
+    }
+    .sidebar li {
+        list-style-type: none;
+        margin:5px;
+        background-color:aquamarine;
+        justify-content:center;
+    }
+    .sidebar a {
+        text-decoration: none;
+        font-size:1.5em;
+        color: #2196F3;
+    }
+    .head > h1 {text-align:center;
+                flex:auto;
+    }
+    .mcgriddle > div {
+        display:flex;
+        flex-direction:row;
+        padding:10px;
+        margin:auto;
+        justify-content:flex-end;
+    }
+    .main {
+        font-size: 30px;
+        padding: 10px;
+    }
+    .snapper {max-width: 800px;
+
+    }
+    @media only screen and (max-width: 500px) {
+        .whole-enchalada {background-color:yellow}
+        .sidebar {flex-direction:row;}
+    }
 }
