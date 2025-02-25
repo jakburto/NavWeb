@@ -1,5 +1,7 @@
 ﻿body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: wheat;
+    margin:0px;
     * {
           box-sizing:border-box
       }
@@ -7,54 +9,122 @@
 .whole-enchalada {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    align-content:stretch;
+    background-color:chocolate;
 }
-    .whole-enchalada > div {
-        text-align:center;
-        align-content: center;
-        margin:5px;
-    }
+    
     .sidebar {
+        background-color:black;
+    }
+    .sidebar ul {
         display:flex;
         flex-direction:column;
-        
-        
-        margin:auto;
-        max-width:800px;
+        align-items:stretch;
+        margin:0px;
+        padding:0px;
+        background-color:lightpink;
     }
     .sidebar li {
+        
         list-style-type: none;
-        margin:5px;
-        background-color:aquamarine;
-        justify-content:center;
+        margin:0px;
+        padding:0px;
+        
+     
     }
     .sidebar a {
         text-decoration: none;
+        display:block;
         font-size:1.5em;
         color: #2196F3;
+        padding:5px;
+        background-color:aquamarine;
     }
-    .head > h1 {text-align:center;
-                flex:auto;
+    .sidebar li a:hover:not(.current) {
+        background-color:darkorange;
+        color:ghostwhite;
     }
-    .mcgriddle > div {
-        display:flex;
-        flex-direction:row;
+    .sidebar li a.current {
+        background-color:#2196F3;
+        color:aquamarine;
+        
+    }
+    div.head {
+        flex:content;
+        text-align:center;
+        font-size:1.5em;
+        /*background-color:rebeccapurple;*/
+        margin:0px;
+        padding:0px;
+        
+    }
+    .mid {
+        grid-area: mid;
+        font-size:1.5em;
+    }
+    iframe {
+        grid-area: vid;
+        width:60%;
+        height: auto;
+    }
+    .mcgriddle {
+        display:grid;
+        gap:10px;
+        grid-template-areas:
+            'photo main main main main'
+            'mid mid mid vid vid'
+            'foot foot foot foot foot';
+        padding:0px;
+        margin:0px;
+        
+    }
+    .snapper {
+        grid-area: photo;
+        margin: 0px;
         padding:10px;
-        margin:auto;
-        justify-content:flex-end;
+    }
+    hr.pickbk {
+        border:5px solid hotpink;
+       
+    }
+    img {
+        width: 70%;
+        max-height: auto;
     }
     .main {
-        font-size: 30px;
+        grid-area:main;
+              font-size: 1.625em;
+        
         padding: 10px;
     }
-    .snapper {max-width: 800px;
+    footer {
+        grid-area:foot;
+        text-align:center;
+        background-color:coral;
+        
+    }
 
     }
-    @media only screen and (max-width: 500px) {
-        .whole-enchalada {background-color:yellow}
-        .sidebar {flex-direction:row;}
-    }
+    @media only screen and (max-width: 600px) {
+        .whole-enchalada {
+            background-color: yellow;
+            justify-content: center;
+        }
+        .sidebar {
+            width:100%;
+        }
+        .sidebar ul {flex-direction:row;
+                     justify-content:space-evenly;
+                     text-align:center;
+        }
+        .sidebar li {width:100%;}
+        .mcgriddle {
+            grid-template-areas:
+                'main'
+                'photo'
+                'mid'
+                'vid'
+                'foot';
+        }
 }

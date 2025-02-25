@@ -1,65 +1,54 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/StyleZ.css" />
     <title>Welcome to JaKobi's Website!</title>
 </head>
-<style>
-    .sidebar {
-        width: 170px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: aquamarine;
-        padding-top: 10px 0;
-    }
 
-        .sidebar a {
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 24px;
-            color: #2196F3;
-            display: block
-        }
-
-    .main {
-        margin-left: 180px;
-    }
-</style>
 <body>
-    <h1 class="main">Contact Me</h1>
-    <form action="" method="post">
-         <h1 class="main">Reach Out</h1>
-        <p>
-            <label>
-                Your Name:
-                <input id="name" type="text" name="name"/>
-            </label>
-        </p>
-        <p>
-            <label>
-                Your Email:
-                <input id="email" type="email" name="email"/>
-            </label>
-        </p>
-        <p>
-            <label>
-                Leave a message:
-                <textarea id="message" name="message"></textarea>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input type="submit" value="Send"
-            </label>
-        </p>
-    </form>
-    <div class="sidebar">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-        </ul>
+    <div class="whole-enchalada">
+        <div class="sidebar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a class="current" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="head">
+            <h1>Contact Me</h1>
+        </div>
+    </div>
+    <div class="mcgriddle">
+        <div class="main">
+            <form action="" method="post">
+                <h1>Reach Out</h1>
+                <p>
+                    <label>
+                        Your Name:
+                        <input id="name" type="text" name="name" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Your Email:
+                        <input id="email" type="email" name="email" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Leave a message:
+                        <textarea id="message" name="message"></textarea>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="submit" value="Send"
+                    </label>
+                </p>
+            </form>
+        </div>
+        <footer>A JaKobi Burton Original &copy;2025</footer>
     </div>
 </body>
 </html>
